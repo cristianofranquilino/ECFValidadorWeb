@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      <h:form>
+	<div class="navbar navbar-default navbar-fixed-top"
+		style="position: absolute;">
+		<div class="navbar navbar-default navbar-fixed-top">
+		
+			<p class="bismart"><strong>BI</strong>Smart Fiscal</p>
+			
+		</div>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+				<a> <img src="#{request.contextPath}/resources/img/logo.png"
+					alt="logo-SIOPS" title="SIOPS-Web" class="img-responsive"
+					style="padding-right: 10px !important;" />
+				</a>
+
+			</div>
+			<div class="navbar-collapse collapse" style="width: 100%;">
+				<ul class="nav navbar-nav navbar-right">
+					<li style="width:auto;padding-top:20px;">
+						<h:outputText value="Olá, #{homeController.enteFederado.usuario.nome}." style="float:left;padding-right:30px;color:#6D6D6D;" />
+						<h:graphicImage value="/resources/img/exit-icon.png" style="float:left;" />
+						<p:commandLink action="#{homeController.sair()}" value="Sair" style="padding:0px 0px 10px 5px;float:left;width:20px;" />
+					</li>					
+				</ul>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</div>
+	</h:form>
+</ui:composition>

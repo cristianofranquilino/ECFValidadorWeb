@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+	
+		<link rel="shortcut icon"
+			href="#{request.contextPath}/resources/img/favicon.png" />
+			
+		<title>Validador ECF</title>
+	
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+			
+		<h:outputStylesheet library="css" name="bootstrap.min.css" />
+		<h:outputStylesheet library="css" name="bootstrap.css" />
+		<h:outputStylesheet library="css" name="style.css" />
+		<h:outputStylesheet library="css" name="sticky-footer-navbar.css" />
+		<h:outputStylesheet library="css" name="jquery.qtip.min.css" />
+		
+		<h:outputScript name="jquery.js" library="js" target="head" />
+		<h:outputScript name="jquery-2.0.3.min.js" library="js" target="head" />
+		<h:outputScript name="bootstrap.min.js" library="js" target="head" />
+		<h:outputScript name="autoNumeric.js" library="js" target="head" />
+		<h:outputScript name="jquery.qtip.min.js" library="js" target="head" />
+		<h:outputScript name="inicial.js" library="js" target="head" />  
+		      
+	</h:head>
+	
+	<h:body>
+	
+		<p:panel styleClass="north">
+			<ui:insert name="top">
+				<ui:include src="partials/menuTop.xhtml" />
+			</ui:insert>
+		</p:panel>
+	
+		<p:panel styleClass="west" style="padding-top:5px;">
+			<ui:insert name="leftMenu" />
+		</p:panel>
+	
+		<p:panel styleClass="center">
+			<ui:insert name="content" />
+		</p:panel>
+		
+		<p:layoutUnit position="south" style="border:0px;">
+				<ui:insert name="footer" >
+					<ui:include src="partials/footer.xhtml" />
+				</ui:insert>
+		</p:layoutUnit>
+	</h:body>
+	</f:view>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<link rel="shortcut icon" href="#{request.contextPath}/resources/img/favicon.png" />
+	<title>SIOPS WEB | Teste de Desenvolvimento</title>
+
+  <!-- Bootstrap core CSS -->
+         
+        <h:outputStylesheet library="css" name="bootstrap.min.css"  />
+
+        <!-- Defout core CSS -->
+        <h:outputStylesheet library="css" name="style.css"  />
+        <h:outputStylesheet library="css" name="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"  />
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+        <![endif]-->
+
+        <!-- Custom styles for this template -->
+        <!-- <link href="css/jumbotron.css" rel="stylesheet"> Esta dando muito espaco no topo --> 
+        <h:outputStylesheet library="css" name="sticky-footer-navbar.css"  />
+        <h:outputStylesheet library="css" name="offcanvas.css"  />
+        <h:outputStylesheet library="css" name="jquery-ui.css"  />
+        
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <h:outputScript name="jquery.js" library="js"/>
+        <h:outputScript name="jquery-2.0.3.min" library="js" />
+        <h:outputScript name="bootstrap.min.js" library="js" />
+        <h:outputScript name="jquery.maskedinput.js" library="js" />
+        <h:outputScript name="barra.js" library="js" />   
+        <h:outputScript name="simpla.jquery.configuration.js" library="js" />  
+        <h:outputScript name="jquery-ui.js" library="js" />  
+        <h:outputScript name="tooltip.js" library="js" /> 
+        
+</h:head>
+
+<h:body>
+
+	<div id="wrap">
+	  <ui:include src="menuTop.xhtml" />
+	  
+		  <div class="container">
+		  <div class="row row-offcanvas row-offcanvas-right">
+		  	<ui:include src="menuLeft.xhtml" />
+		  	   <div class="col-xs-12 col-sm-9">
+                        <p class="pull-right visible-xs">
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu de NavegaÃ§Ã£o</button>
+                        </p>
+		 	<ui:insert name="Conteudo" />
+		 		</div>
+		 	</div>
+		  </div>
+	  
+  	</div> <!-- /wrap -->
+  	<hr />
+  	<ui:include src="footer.xhtml" />
+</h:body>
+
+</html>
+
